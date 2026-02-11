@@ -1,9 +1,10 @@
-import { Header } from '@/widgets'
+import { Content, Header } from '@/widgets'
 
 function Overview() {
 	return (
 		<div>
 			<Header />
+			<Content />
 		</div>
 	)
 }

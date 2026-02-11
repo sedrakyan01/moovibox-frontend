@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: optional;
+	src: url('/fonts/open-sans-v40-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: optional;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/rubik-v31-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-display: optional;
+	src: url('/fonts/open-sans-v40-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Archivo Black';
+	font-style: normal;
+	font-weight: 400;
+	font-display: optional;
+	src: url('/fonts/archivo-black-v21-latin-regular.woff2') format('woff2');
+}

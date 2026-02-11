@@ -1,30 +1,24 @@
+import { useVisit } from '@/shared/hooks'
+import { signInAnimation } from '@/shared/lib'
+import { motion } from 'framer-motion'
+import { LogIn } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const signInItems = [
-	{
-		name: 'Войти',
-		path: '/login',
-	},
-	{
-		name: 'Создать аккаунт',
-		path: '/register',
-	},
-]
-
 function SignIn() {
+	const hasAnimated = useVisit('signInAnimated', 'local')
 	return (
-		<div className='flex items-center gap-4'>
-			{signInItems.map(item => (
-				<Link to={item.path}>
-					<li
-						key={item.name}
-						className='px-4 py-1 rounded-md text-black transition-colors font-medium bg-[#E5E5E5]'
-					>
-						{item.name}
-					</li>
-				</Link>
-			))}
-		</div>
+		<motion.div
+			initial={hasAnimated ? false : 'hidden'}
+			animate='visible'
+			variants={signInAnimation}
+		>
+			<Link to='/signin'>
+				<button className='px-5 py-1.5 rounded-md flex gap-3 items-center text-[#E5E5E5] hover:text-white cursor-pointer transition-colors tracking-widest font-bold bg-[#262626] text-xs border border-white/20 brightness-110'>
+					<LogIn size={19} />
+					ВХОД
+				</button>
+			</Link>
+		</motion.div>
 	)
 }
 
